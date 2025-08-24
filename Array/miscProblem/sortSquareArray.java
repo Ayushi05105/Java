@@ -11,7 +11,7 @@ public class sortSquareArray {
         System.out.println();
     }
 
-    static void swapInArray(int arr[], int i, int j) {
+      static void swapInArray(int arr[], int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
@@ -25,12 +25,13 @@ public class sortSquareArray {
             j--;
         }
     }
+        
 
     static int[] sortSquare(int[] arr) {
         int n = arr.length;
         int left = 0, right = n - 1;
         int[] ans = new int[n];
-        int k = 0;
+        int k = 1;       // k= 1 and k-- then we don't need to reverse
 
         while (left <= right) {
             if (Math.abs(arr[left]) > Math.abs(arr[right])) {
