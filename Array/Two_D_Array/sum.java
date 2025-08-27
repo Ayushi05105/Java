@@ -9,8 +9,9 @@ public class sum {
             for(int j =0;j<matrix[i].length;j++){
                 System.out.println(matrix[i][j] + " ");
             }
-            System.out.println();
         }
+      System.out.println();
+
     }
 
     static void add(int[][] a, int r1,int c1,int[][] b,int r2,int c2){
