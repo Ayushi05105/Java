@@ -40,6 +40,7 @@ public class PresentQuery {
             }
             q--;
         }
+        sc.close();
 
     }
     
