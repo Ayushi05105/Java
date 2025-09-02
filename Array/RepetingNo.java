@@ -27,6 +27,7 @@ public class RepetingNo {
         }
 System.out.println("First Repeting number"+firstRepetingNumber(arr));
 
+        sc.close();
     }
     
 }

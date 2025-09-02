@@ -12,6 +12,7 @@ public class numrec2 {
             }
             System.out.println();
         }
+        sc.close();
     }
     
 }

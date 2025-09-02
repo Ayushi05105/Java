@@ -50,7 +50,7 @@ public class reverseMatrix {
         reverseMatrix(matrix);
         System.out.println("Reverse matrix :");
         printArray(matrix);
-
+        sc.close();
 
     }
     

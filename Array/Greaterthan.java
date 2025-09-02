@@ -30,6 +30,8 @@ public class Greaterthan {
 
         System.out.println("Number greater than  X is :"+Greater_than(arr, x));
 
+        sc.close();
+
     }
 }
 

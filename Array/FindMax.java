@@ -33,6 +33,8 @@ public class FindMax{
             arr[i] = sc.nextInt();
         }
         System.out.println("Second max element: "+findSecondMax(arr));
+
+        sc.close();
     }
     
 }

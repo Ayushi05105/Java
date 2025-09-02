@@ -67,7 +67,7 @@ public class multiplication {
         printMatrix( b );
         
         multiply(a, r1, c1, b, r2, c2);
-
+        sc.close();
 
     }
     

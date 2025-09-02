@@ -12,6 +12,7 @@ public class rect {
             }
             System.out.println("");
         }
+        sc.close();
     }
     
 }

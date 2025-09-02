@@ -66,6 +66,7 @@ public class rotation90 {
         rotate(matrix, r);
         System.out.println("Rotation of matrix");
         printMatrix(matrix);
+        sc.close();
     }
     
 }

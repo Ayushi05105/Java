@@ -11,7 +11,7 @@ public class revTriangle {
             }
             System.out.println("");
         }
-
+        sc.close();
     }
     
 }

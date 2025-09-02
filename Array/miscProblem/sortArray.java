@@ -53,5 +53,7 @@ public class sortArray {
         System.out.println("sorted array:");
         printArray(arr);
 
+        sc.close();
+
     }
 }

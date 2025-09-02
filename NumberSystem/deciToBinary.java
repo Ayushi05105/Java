@@ -14,6 +14,7 @@ public class deciToBinary {
             decimal_num /=2;
         }
         System.out.println(ans);
+        sc.close();
         
     }
     

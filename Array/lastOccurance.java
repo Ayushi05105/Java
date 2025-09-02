@@ -31,6 +31,7 @@ public class lastOccurance {
 
         System.out.println("LAST Occurance OF X:"+lastOccurences(arr, x));
 
+        sc.close();
     }
     
 }

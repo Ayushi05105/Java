@@ -52,6 +52,8 @@ public class sortArray2 {
         sortZeroesAndOnes(arr);
         System.out.println("Sorted array:");
         printArray(arr);
+
+        sc.close();
     }
     
     

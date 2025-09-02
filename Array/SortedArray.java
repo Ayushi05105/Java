@@ -24,7 +24,7 @@ public class SortedArray {
        int[] ans = smallestAndLargestElement(arr);
        System.out.println("Smallest: " +ans[0]);
        System.out.println("Largest: " +ans[1]);
-        
+        sc.close();
     }
     
 }

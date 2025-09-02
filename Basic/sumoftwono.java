@@ -13,6 +13,7 @@ public class sumoftwono {
         int sum = num_1 + num_2;
 
         System.out.println("Sum: "+sum);
+        sc.close();
     }
     
 }

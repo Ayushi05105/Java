@@ -10,6 +10,7 @@ public class sq {
 
         int sq = number * number;
         System.out.println("Square of number is: " +sq);
+        sc.close();
 
     }
 

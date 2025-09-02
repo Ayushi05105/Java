@@ -51,6 +51,7 @@ public class rotate {
         int[] ans=Rotate(arr, k);
         System.out.println("Array after rotation: ");
         printArray(ans);
+        sc.close();
 
     }
     

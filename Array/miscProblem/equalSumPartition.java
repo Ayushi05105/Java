@@ -37,6 +37,8 @@ public class equalSumPartition {
             arr[i] = sc.nextInt();
         }
         System.out.println("Equal Partition possible:" + EqualSumPartition(arr));
+            sc.close();
+
     }
 
 }

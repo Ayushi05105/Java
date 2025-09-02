@@ -12,6 +12,7 @@ public class noofinput {
             numofdigit++;
         }
         System.out.println("Number of digit in "+original_n+" = "+numofdigit);
+        sc.close();
     }
         
     }

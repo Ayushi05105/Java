@@ -11,6 +11,7 @@ public class numtria1 {
             }
             System.out.println();
         }
+        sc.close();
     }
     
 }

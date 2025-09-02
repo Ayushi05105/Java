@@ -39,6 +39,8 @@ public class printArray {
         //               };
          PrintArray(arr);
 
+         sc.close();
+
     }
     
 }

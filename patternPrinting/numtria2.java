@@ -18,5 +18,6 @@ public class numtria2 {
             }
             System.out.println();
         }
+        sc.close();
     }
 }

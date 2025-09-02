@@ -34,6 +34,7 @@ public class TripleSum {
 
        System.out.println(tripletSum(arr,target));
 
+       sc.close();
     }
     
 }

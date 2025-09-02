@@ -47,6 +47,7 @@ public class transpose2 {
         System.out.println("Transpose of matrix");
          transposeInPlace(matrix,r,c);
         printMatrix( matrix );
+        sc.close();
     }
     
 }

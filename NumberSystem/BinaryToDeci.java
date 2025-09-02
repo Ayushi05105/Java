@@ -15,6 +15,8 @@ public class BinaryToDeci {
             pw *= 2;
         }
         System.out.println(ans);
+
+        sc.close();
     }
 
 }

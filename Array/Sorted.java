@@ -25,7 +25,7 @@ public class Sorted {
         }
 
         System.out.println("is Sorted " + isSorted(arr));
-        
+        sc.close();
     }
     
 }

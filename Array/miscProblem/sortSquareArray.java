@@ -63,6 +63,8 @@ public class sortSquareArray {
         reverse(ans);
         printArray(ans);
 
+        sc.close();
+
     }
 
 }

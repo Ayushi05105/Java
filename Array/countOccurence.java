@@ -28,6 +28,7 @@ public class countOccurence {
         int x = sc.nextInt();
 
         System.out.println("COUNT OF X:"+countOccurences(arr, x));
+        sc.close();
 
     }
 }

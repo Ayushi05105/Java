@@ -50,6 +50,7 @@ public class RectangleSum2 {
         int r1 = sc.nextInt();
         int r2 = sc.nextInt();
         System.out.println("Rectangle sum " + findSum(matrix, l1, r1, l2, r2));
+        sc.close();
     }
     
 }

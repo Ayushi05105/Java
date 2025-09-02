@@ -48,6 +48,7 @@ public class transpose {
         System.out.println("Transpose of matrix");
         int[][] ans = findTranspose(matrix,r,c);
         printMatrix( ans );
+        sc.close();
     }
     
 }

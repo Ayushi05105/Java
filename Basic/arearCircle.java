@@ -15,6 +15,8 @@ public class arearCircle {
         double circumference = 2 * pi * r;
         System.out.println(circumference);
 
+        sc.close();
+
     }
     
 }

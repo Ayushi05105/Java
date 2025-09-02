@@ -34,5 +34,7 @@ public class PascalTriangle {
         int[][] ans = pascal(n);
         printMatrix(ans);
 
+        sc.close();
+
     }
 }

@@ -38,6 +38,8 @@ public class suffixSum {
         printArray(arr);
         int[] suff = SuffixSum(arr);
         printArray(suff);
+
+        sc.close();
     }
     
 }

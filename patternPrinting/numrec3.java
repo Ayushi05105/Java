@@ -18,6 +18,7 @@ public class numrec3 {
                             System.out.println();
 
         }
+        sc.close();
     }
     
 }

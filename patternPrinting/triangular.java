@@ -11,6 +11,7 @@ public class triangular {
             }
             System.out.println("");
         }
+        sc.close();
     }
     
 }

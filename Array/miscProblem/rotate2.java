@@ -57,6 +57,8 @@ public class rotate2 {
         System.out.println("Array after rotation: ");
         printArray(arr);
 
+        sc.close();
+
     }
     
 }

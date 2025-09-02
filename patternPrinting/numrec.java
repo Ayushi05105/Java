@@ -14,5 +14,6 @@ public class numrec {
                     System.out.println();
 
         }
+        sc.close();
     }
 }

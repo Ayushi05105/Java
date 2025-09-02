@@ -34,6 +34,8 @@ public class min {
             arr[i] = sc.nextInt();
         }
         System.out.println("Second min element: "+findSecondMin(arr));
+
+        sc.close();
     }
     
     

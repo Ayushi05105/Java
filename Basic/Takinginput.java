@@ -12,6 +12,7 @@ public class Takinginput {
         int num_1 = sc.nextInt();
 
         System.out.println("Lucky Number is:"+num_1);
+        sc.close();
 
     }
     

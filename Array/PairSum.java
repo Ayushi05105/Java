@@ -29,6 +29,8 @@ public class PairSum {
         
         System.out.println(pairSum(arr, target));
 
+        sc.close();
+
     }
     
     

@@ -22,6 +22,7 @@ public class swap {
         int b = 3;
         int arr[] = {1,2 ,3,4,5};
         Swap(a,b);
+
     }
     
 }
