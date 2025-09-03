@@ -1,6 +1,6 @@
 package Recursion.Day1;
 
-public class factotial {
+public class factorial1 {
 
     static int factorial(int n){
 
