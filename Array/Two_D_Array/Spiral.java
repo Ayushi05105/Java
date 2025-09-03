@@ -2,7 +2,8 @@ package Two_D_Array;
 
 import java.util.Scanner;
 
-import miscProblem.sortArray;
+import Two_D_Array.Spiral;
+
 
 public class Spiral {
 
@@ -27,7 +28,7 @@ public class Spiral {
             }
             topRow++ ;
 
-            //rightCol -> topRow to bottomCol
+            //rightCol -> topRow to bottomRow
             for(int i = topRow ; i <= bottomRow && totalElement < r*c ;i++){
                 System.out.print(matrix[i][rightCol] + " ");
                 totalElement++;
