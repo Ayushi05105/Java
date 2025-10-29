@@ -1,4 +1,4 @@
-package Revision.Array;
+//package Revision.Array;
 
 public class sortNegative {
 
