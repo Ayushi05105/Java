@@ -29,6 +29,33 @@ public class mergeTwoList {
         return head.next;
     }
 
+    // easy method 
+    public static Node mergeTwoList2(Node list1, Node list2){
+        Node t1 = list1;
+        Node t2 = list2;
+        Node h = new Node(100);
+        Node t = h;
+        while(t1 != null && t2 != null){
+            if(t1.val<t2.val){
+                t.next = t1;
+                t = t1;
+                t1 = t1.next;
+            }
+            else{
+                t.next = t2;
+                t = t2;
+                t2 = t2.next;
+            }
+        }
+        if(t1 == null){
+            t.next = t2;
+        }
+        else{
+            t.next = t1;
+        }
+        return h.next;
+    }
+
     public static void displayLL(Node head){
         Node temp = head;
         while(temp != null){
@@ -59,5 +86,7 @@ public class mergeTwoList {
         y.next = z;
         Node m = mergeSortedList(a, x);
         displayLL(m);
+        Node p = mergeTwoList2(a, x);
+        displayLL(p);
     }
 }
