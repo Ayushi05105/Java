@@ -1,6 +1,5 @@
 package LinkedList;
 
-
 public class evenOddLL {
 
     public static Node evenOdd(Node head){
@@ -8,8 +7,7 @@ public class evenOddLL {
             return head;
         }
         Node temp = head;
-        Node tempO = new Node(0);  // dummy = tempO
-                                        // tail =odd
+        Node tempO = new Node(0);  
         Node tempE = new Node(0);
         Node Odd = tempE ;
         Node Even = tempO;
