@@ -1,4 +1,5 @@
 package LinkedList;
+// odd value then even value
 
 public class evenOddLL {
 
