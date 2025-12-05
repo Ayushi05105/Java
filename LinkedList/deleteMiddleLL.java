@@ -22,6 +22,15 @@ public class deleteMiddleLL {
         }
     }
 
+    public static void displayLL(Node head){
+        Node temp = head;
+        while(temp != null){
+        System.out.print(temp.data+" ");
+        temp = temp.next;
+    }
+    System.out.println();
+}
+
     public static void main(String[] args) {
         Node a = new Node(5);
         Node b = new Node(7);
@@ -34,6 +43,7 @@ public class deleteMiddleLL {
         c.next = d;
         d.next = e;
         e.next = f;
+        displayLL(a);
         System.out.println(deleteLL(a));
     }
     
