@@ -27,6 +27,31 @@ public class basic2Dll {
         temp.next = t;
         t.prev = temp;    
 }
+    public static void insertAtIdx(Node head,int idx,int x){
+        Node temp = head;
+        for(int i=1;i<=idx-1;i++){
+            temp = temp.next;
+        }
+        Node t = new Node(x);
+        temp.next.prev = t;
+        t.prev = temp;
+        t.next = temp.next;
+        temp.next = t;
+    }
+
+    public static void insertAtIdx2(Node head,int idx,int x){
+        Node temp = head;
+        for(int i=1;i<=idx-1;i++){
+            temp = temp.next;
+        }
+
+        Node r = temp.next;
+        Node t = new Node(x);
+        temp.next = t;
+        t.prev = temp;
+        t.next = r;
+        r.prev = t;
+    }
 
     public static class Node{
         Node next;
@@ -51,6 +76,10 @@ public class basic2Dll {
         Node newNode = insertAtHead(a, 30);
         display(newNode);
         insertAtTail(a, 90);
+        display(a);
+        //insertAtIdx(a, 3, 45);
+        //display(a);
+        insertAtIdx2(a, 3, 35);
         display(a);
     }
 }
