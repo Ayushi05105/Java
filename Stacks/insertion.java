@@ -22,5 +22,5 @@ public class insertion {
         }
         System.out.println(st);
     }
-    
+      
 }
