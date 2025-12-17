@@ -21,6 +21,8 @@ public class test {
     }
     public static void reorderList(Node head){
         if(head == null || head.next == null) return;
+        //finding mid
+        // slow is middle
         Node slow = head;
         Node fast = head;
         while(fast!=null && fast.next!=null){
