@@ -28,18 +28,25 @@ public class balancedBracket {
                 st.push(ch);
             }
             else{
-                if(st.size()==0) return false;
-                if(st.peek()=='('||st.peek()=='{' ||st.peek() =='[')  st.pop();
+                if(st.isEmpty()){
+                    return false;
+                }
+            else{
+                char top = st.pop();
+                //if(st.size()==0) return false;
+                if((ch==')'&& top!='(')||(ch=='}' && top!='{') ||(ch ==']' && top !='[')){
+                    return false;
+                }  
             }
         }
-        if(st.size()>0) return false;
-        else return true;
+    }
+        return st.isEmpty();
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         //System.out.println(isBalanced(str));
-        System.out.println(isBalancedbracket(str));
+        isBalancedbracket(str);
         sc.close();
 
     }
