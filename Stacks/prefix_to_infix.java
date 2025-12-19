@@ -17,7 +17,7 @@ public class prefix_to_infix {
                 String v1 = val.pop();
                 String v2 = val.pop();
                 char op = ch;
-                String t = v1 + op + v2;
+                String t = "(" + v1 + op + v2 + ")";
                 val.push(t);
             }
         }   
