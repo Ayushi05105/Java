@@ -42,7 +42,7 @@ public class the_celebrityProblem {
         }
         Solution obj = new Solution();
         System.out.println(obj.celebrity(mat));
-        
+        sc.close();
     }
     
 }
