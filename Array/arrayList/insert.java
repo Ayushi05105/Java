@@ -51,8 +51,6 @@ public class insert {
         l.add(true);
         System.out.println(l);
 
-
-
     }
     
 }
