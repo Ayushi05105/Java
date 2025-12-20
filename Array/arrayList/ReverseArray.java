@@ -30,7 +30,7 @@ public class ReverseArray {
         list.add(22);
         list.add(10);
         System.out.println("Original List " + list);
-        Collections.reverse(list);
+        Collections.reverse(list); // inbuild method
         System.out.println("Reverse List" + list);
         Collections.sort(list);
         System.out.println("Ascending Order" + list);
