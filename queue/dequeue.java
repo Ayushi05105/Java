@@ -16,6 +16,8 @@ public class dequeue {
         System.out.println(dq);
         dq.removeLast();
         System.out.println(dq);
+        dq.add(5);
+        System.out.println(dq);
         // dq.removeAll(dq);
         // System.out.println(dq);
         //dq.removeLastOccurrence(dq);
