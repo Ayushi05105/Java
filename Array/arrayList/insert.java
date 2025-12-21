@@ -50,6 +50,7 @@ public class insert {
         l.add(1);
         l.add(true);
         System.out.println(l);
+        
 
     }
     
