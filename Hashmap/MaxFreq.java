@@ -7,7 +7,7 @@ public class MaxFreq {
 
 
     public static void main(String[] args) {
-        int[] arr={2,5,1,4,4,6,5,7,1,4,3,1,4};
+        int[] arr={2,5,1,4,4,6,5,7,1,4,3,1,4,9,1,1};
         Map<Integer, Integer> freq = new HashMap<>();
         for(int el : arr){
             if(!freq.containsKey(el)){
