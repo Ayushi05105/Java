@@ -9,7 +9,7 @@ public class RatInDeadMazeFourDir {
                       {1,1,0,1,0,1},
                      {0,1,1,1,1,1},
                      {0,0,1,0,1,1}};
-        boolean[][] isVisited = new boolean[rows][cols];             
+        boolean[][] isVisited = new boolean[rows][cols];    //SC=O(n*n)         
         print(0,0,rows-1,cols-1," ",maze,isVisited);
     }
 
