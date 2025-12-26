@@ -1,5 +1,5 @@
 package BackTracking;
-
+//2 direction only right and down
 public class mazePath {
     public static void main(String[] args) {
         int rows = 4;
