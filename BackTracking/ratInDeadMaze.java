@@ -2,13 +2,13 @@ package BackTracking;
 
 public class ratInDeadMaze {
     public static void main(String[] args) {
-        int rows = 3;
-        int cols = 3;
+        int rows = 4;
+        int cols = 6;
         int[][] maze ={{1,0,1,1,1,1},
                       {1,1,1,1,0,1},
                      {0,1,1,1,1,1},
                      {0,0,1,0,1,1}};
-        print(1,1,rows,cols," ",maze);
+        print(0,0,rows-1,cols-1," ",maze);
     }
 
     private static void print(int sr, int sc,int er, int ec,String s,int[][] maze){
