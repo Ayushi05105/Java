@@ -3,7 +3,7 @@ package BackTracking;
 public class printPermutation {
 
     public static void printp(String str, String t){
-        if(str.equals(" ")){
+        if(str.equals("")){
             System.out.println(t);
             return;
         }
