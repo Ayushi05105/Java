@@ -1,3 +1,5 @@
+package BackTracking;
+
 public class nQueens {
     public static void main(String[] args) {
         int n =4;
@@ -15,7 +17,7 @@ public class nQueens {
         if(row ==n){                         //base case
             for(int i =0;i<n;i++){
                 for(int j =0;j<n;j++){
-                    System.out.print(board[i][j]);
+                    System.out.print(board[i][j]+" ");
                 }
                 System.out.println();
             }
