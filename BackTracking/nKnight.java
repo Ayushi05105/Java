@@ -48,5 +48,19 @@ public class nKnight {
         return helper(grid,0,0,0);
         
     }
+
+    public static void main(String[] args) {
+        nKnight obj = new nKnight();
+        int[][] grid ={
+            {0,11,16,5,20},
+            {17,4,19,10,15},
+            {12,1,8,21,6},
+            {3,18,23,14,9},
+            {24,13,2,7,22}
+        };
+
+        boolean res=obj.checkValidGrid(grid);
+        System.out.println("Is valid knight tour? " + res);
+    }
 }
     
