@@ -1,5 +1,5 @@
 package BackTracking;
-public class nKnight {
+public class CheckNKnight {
 
     public boolean helper(int[][] grid, int row,int col,int num){
         int n = grid.length;
@@ -50,7 +50,7 @@ public class nKnight {
     }
 
     public static void main(String[] args) {
-        nKnight obj = new nKnight();
+        CheckNKnight obj = new CheckNKnight();
         int[][] grid ={
             {0,11,16,5,20},
             {17,4,19,10,15},
