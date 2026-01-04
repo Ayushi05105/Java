@@ -9,10 +9,10 @@ public class nQueens {
                  board[i][j] = 'X';
             }
         }
-        nQueens(board,0);
+        nQueen(board,0);
     }
 
-    private static void nQueens(char[][] board, int row) {
+    private static void nQueen(char[][] board, int row) {
         int n = board.length;
         if(row ==n){                         //base case
             for(int i =0;i<n;i++){
@@ -27,7 +27,7 @@ public class nQueens {
         for(int j=0;j<n;j++){                // work and call
             if(isSafe(board,row,j)){
                 board[row][j] ='Q';
-                nQueens(board, row+1);
+                nQueen(board, row+1);
                 board[row][j] ='X';         //backtracking
             }
         }
