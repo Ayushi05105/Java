@@ -9,21 +9,21 @@ public class traversal {
             this.val = val;
         }
     }
-    //preorder
+    //preorder    Root Left Right
     public static void Preorder(Node root){
         if(root ==null) return;
         System.out.print(root.val+" ");
         Preorder(root.left);
         Preorder(root.right);
     }
-    //inorder
+    //Inorder   Left  Root  Right
      public static void Inorder(Node root){
         if(root ==null) return;
         Inorder(root.left);
         System.out.print(root.val+" ");
         Inorder(root.right);
     }
-    //postorder
+    //postorder    Root  Left Right
      public static void Postorder(Node root){
         if(root ==null) return;
         Postorder(root.left);
