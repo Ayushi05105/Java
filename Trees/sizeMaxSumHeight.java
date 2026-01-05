@@ -20,6 +20,12 @@ public class sizeMaxSumHeight {
         return Math.max(root.val,Math.max(max(root.left),max(root.right)));
     }
 
+    //min
+    public static int min(Node root){
+        if(root ==null) return Integer.MAX_VALUE;
+        return Math.min(root.val,Math.min(min(root.left),min(root.right)));
+    }
+
     //height
     public static int height(Node root){
         if(root ==null) return 0;
@@ -41,6 +47,12 @@ public class sizeMaxSumHeight {
         if(root==null) return 0;
         return root.val +sum(root.left)+sum(root.right);
     }
+    
+    //product
+    public static int product(Node root){
+        if(root == null) return 1;
+        return root.val * product(root.left) * product(root.right);
+    }
 
     //preorder
     public static void preorder(Node root){
@@ -51,7 +63,7 @@ public class sizeMaxSumHeight {
     }
         public static void main(String[] args) {
         Node root = new Node(2);
-        Node a = new Node(4);
+        Node a = new Node(1);
         Node b = new Node(10);
         root.left = a;
         root.right = b;
@@ -67,6 +79,8 @@ public class sizeMaxSumHeight {
         System.out.println("Sum:" + sum(root));
         System.out.println("Max:" + max(root));
         System.out.println("Height:"+height(root));
+        System.out.println("MIN: "+ min(root));
+        System.out.println("Product: "+product(root));
     }
     
 }
