@@ -1,7 +1,4 @@
 package Trees;
-
-import Recursion.Day1.sod;
-
 public class traversal {
     public static class Node{
         int val ;
