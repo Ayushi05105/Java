@@ -29,7 +29,7 @@ public class NthLevel {
         a.left = c;
         a.right = d;
         Node e = new Node(6);
-        Node f= new Node(7);
+        Node f= new Node(8);
         b.left =e;
         b.right = f;
         nthLevel(root, 3);        
