@@ -32,7 +32,7 @@ public class CountSort {
 
 
     public static void main(String[] args) {
-        int[] arr={0,1,5,3,7,2,9};
+        int[] arr={0,1,5,3,7,2,10};
         countSort(arr);
         displayArray(arr);
     }
