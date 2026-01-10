@@ -10,6 +10,14 @@ public class oddevenLL {
            // this.next = null;
         }
     }
+    public static class Pair{
+        Node oddHead;
+        Node evenHead;
+        Pair(Node oddHead,Node evenHead){
+            this.oddHead = oddHead;
+            this.evenHead = evenHead;
+        }
+    }
 
     public static void display(Node head){
     Node temp = head;
@@ -17,6 +25,7 @@ public class oddevenLL {
         System.out.print(temp.data+" ");
         temp = temp.next;
     }
+    System.out.println();
 }
 
     public static Node evenodd(Node head){
@@ -40,6 +49,29 @@ public class oddevenLL {
         tempO.next = even;
         return odd.next;
     }
+
+       public static Pair evenoddList(Node head){
+        Node temp = head;
+        Node odd = new Node(0);
+        Node even = new Node(0);
+        Node tempO = odd;
+        Node tempE = even;
+        while(temp != null){
+            if(temp.data % 2 != 0){
+            tempO.next = temp;
+            temp = temp.next;
+            tempO = tempO.next;
+            }else{
+            tempE.next = temp;
+            temp = temp.next;
+            tempE = tempE.next;
+            }
+        }
+        tempE.next = null;
+        tempO.next = null;
+
+        return new Pair(odd.next,even.next);
+    }
     public static void main(String[] args) {
         Node a = new Node(3);
         Node b = new Node(5);
@@ -58,6 +90,11 @@ public class oddevenLL {
         g.next = h;
         Node res = evenodd(a);
         display(res);
+        Pair result = evenoddList(a);
+        System.out.print("odd list: ");
+        display(result.oddHead);
+        System.out.print("even List: ");
+        display(result.evenHead);
 
     }
        
