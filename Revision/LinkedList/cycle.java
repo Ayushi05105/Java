@@ -27,6 +27,25 @@ public class cycle {
         return false;
     }
 
+    public static Node CycleReturn(Node head){
+        Node fast = head;
+        Node slow = head;
+        if(fast == null || fast.next == null){
+            return null;
+        }
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(fast == slow ) break;
+        }
+        Node temp = head;
+        while(temp != slow){
+            temp = temp.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(9);
         Node b = new Node(5);
@@ -39,6 +58,9 @@ public class cycle {
         d.next = e; 
         e.next = c;
         System.out.println(Cycle(a));
+        Node res = CycleReturn(a);
+        System.out.println(res.data);
+       
     }
     
 }
