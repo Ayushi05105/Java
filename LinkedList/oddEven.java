@@ -49,7 +49,7 @@ public static void displayLL(Node head){
 
 
 public static void main(String[] args) {
-    Node a = new Node(3);
+        Node a = new Node(3);
         Node b = new Node(5);
         Node c = new Node(4);
         Node d = new Node(1);
