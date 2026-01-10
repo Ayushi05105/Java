@@ -72,13 +72,14 @@ public class intersectionOf2LL {
         //Node v = new Node(6);
         x.next = y;
         y.next = z;
+        z.next = c;
      //   z.next = u;
        // u.next = v;         
         displayLL(a);
         displayLL(x);
         Node m = common(a, x);
         if(m != null){
-            System.out.println("Intersection" + m.data);
+            System.out.println("Intersection " + m.data);
         }
         else{
             System.out.println("no intersection.");
