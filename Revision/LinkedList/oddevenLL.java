@@ -1,48 +1,50 @@
 package Revision.LinkedList;
 
-
 public class oddevenLL {
-    public static class Node{
+    public static class Node {
         int data;
         Node next;
-        Node(int data){
+
+        Node(int data) {
             this.data = data;
-           // this.next = null;
+            // this.next = null;
         }
     }
-    public static class Pair{
+
+    public static class Pair {
         Node oddHead;
         Node evenHead;
-        Pair(Node oddHead,Node evenHead){
+
+        Pair(Node oddHead, Node evenHead) {
             this.oddHead = oddHead;
             this.evenHead = evenHead;
         }
     }
 
-    public static void display(Node head){
-    Node temp = head;
-    while(temp != null){
-        System.out.print(temp.data+" ");
-        temp = temp.next;
+    public static void display(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
     }
-    System.out.println();
-}
 
-    public static Node evenodd(Node head){
+    public static Node evenodd(Node head) {
         Node temp = head;
         Node odd = new Node(0);
         Node even = new Node(0);
         Node tempO = odd;
         Node tempE = even;
-        while(temp != null){
-            if(temp.data % 2 != 0){
-            tempO.next = temp;
-            temp = temp.next;
-            tempO = tempO.next;
-            }else{
-            tempE.next = temp;
-            temp = temp.next;
-            tempE = tempE.next;
+        while (temp != null) {
+            if (temp.data % 2 != 0) {
+                tempO.next = temp;
+                temp = temp.next;
+                tempO = tempO.next;
+            } else {
+                tempE.next = temp;
+                temp = temp.next;
+                tempE = tempE.next;
             }
         }
         tempE.next = null;
@@ -50,28 +52,29 @@ public class oddevenLL {
         return odd.next;
     }
 
-       public static Pair evenoddList(Node head){
+    public static Pair evenoddList(Node head) {
         Node temp = head;
         Node odd = new Node(0);
         Node even = new Node(0);
         Node tempO = odd;
         Node tempE = even;
-        while(temp != null){
-            if(temp.data % 2 != 0){
-            tempO.next = temp;
-            temp = temp.next;
-            tempO = tempO.next;
-            }else{
-            tempE.next = temp;
-            temp = temp.next;
-            tempE = tempE.next;
+        while (temp != null) {
+            if (temp.data % 2 != 0) {
+                tempO.next = temp;
+                temp = temp.next;
+                tempO = tempO.next;
+            } else {
+                tempE.next = temp;
+                temp = temp.next;
+                tempE = tempE.next;
             }
         }
         tempE.next = null;
         tempO.next = null;
 
-        return new Pair(odd.next,even.next);
+        return new Pair(odd.next, even.next);
     }
+
     public static void main(String[] args) {
         Node a = new Node(3);
         Node b = new Node(5);
@@ -97,5 +100,5 @@ public class oddevenLL {
         display(result.evenHead);
 
     }
-       
+
 }
