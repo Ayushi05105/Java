@@ -11,6 +11,14 @@ public class copyll {
         }
     }
 
+    public static void display(Node head){
+        Node temp = head;
+        while (temp!=null) {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+
     public static Node copyRandomList(Node head){
         Node head2= new Node(0);
         Node temp2 =head2;
@@ -55,5 +63,26 @@ public class copyll {
                 temp2 = temp2.next;
             }
             return head2;
+        }
+
+        public static void main(String[] args) {
+            Node a = new Node(3);
+            Node b = new Node(6);
+            Node c = new Node(9);
+            Node d = new Node(4);
+            Node e = new Node(5);
+            a.next = b;
+            b.next = c;
+            c.next = d;
+            d.next = e;
+            a.random = c;
+            b.random = a;
+            c.random = d;
+            d.random = b;
+            e.random = null;
+            display(a);
+            Node copy = copyRandomList(a);
+            display(copy);
+
         }
     }
