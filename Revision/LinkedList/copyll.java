@@ -26,7 +26,7 @@ public class copyll {
         //creating deep copy
         while(temp1 != null){
             Node temp = new Node(temp1.data);
-            temp2.next = temp1;
+            temp2.next = temp;
             temp2 = temp;
             temp1 = temp1.next;
         }
