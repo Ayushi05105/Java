@@ -35,7 +35,7 @@ public class copyll {
         temp1 = head;
         //alternating connections
         Node temp = new Node(-1);
-        while(temp!=null){
+        while(temp1!=null){
             temp.next = temp1;
             temp1 = temp1.next;
             temp = temp.next;
@@ -66,9 +66,9 @@ public class copyll {
         }
 
         public static void main(String[] args) {
-            Node a = new Node(3);
-            Node b = new Node(6);
-            Node c = new Node(9);
+            Node a = new Node(65);
+            Node b = new Node(11);
+            Node c = new Node(78);
             Node d = new Node(4);
             Node e = new Node(5);
             a.next = b;
