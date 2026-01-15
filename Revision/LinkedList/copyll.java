@@ -53,6 +53,8 @@ public class copyll {
             }
             temp2 = head2;
             temp1 = head;
+
+            
             //separating list
             while(temp !=null){
                 temp1.next = temp2.next;
