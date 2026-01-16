@@ -31,5 +31,19 @@ public class TreePath {
         helper(root,ans,"");
         return ans;
     }
+
+    public static void main(String[] args) {
+        TreePath Tp= new TreePath();
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.right = new Node(5);
+        List<String> paths = Tp.binaryTreePaths(root);
+
+        for(String path: paths){
+            System.out.println(path);
+        }
+
+    }
     
 }
