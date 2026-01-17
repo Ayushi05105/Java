@@ -27,6 +27,7 @@ public static void main(String[] args) {
         a.left = c;
         a.right = d;
         Node e = new Node(11);
+        
         b.right = e;
     }
 }
