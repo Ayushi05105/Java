@@ -33,5 +33,7 @@ public class symmetricTree {
         root.left =invertTree(root.left);
         return SameTree(root.left,root.right);
     }
-    
+    public static void main(String[] args) {
+        
+    }
 }

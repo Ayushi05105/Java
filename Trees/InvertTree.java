@@ -1,7 +1,5 @@
 package Trees;
 
-import javax.swing.tree.TreeNode;
-
 public class InvertTree {
     public static class Node{
         int val;
