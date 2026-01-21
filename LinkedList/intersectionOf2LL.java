@@ -1,5 +1,4 @@
 package LinkedList;
-
 public class intersectionOf2LL {
 
     public static Node common(Node headA,Node headB){
