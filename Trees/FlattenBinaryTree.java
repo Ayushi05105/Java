@@ -29,4 +29,7 @@ public class FlattenBinaryTree {
         else root.right = rightTree;
         return;
     }
+    public static void flatten2(Node root){
+        
+    }
 }
