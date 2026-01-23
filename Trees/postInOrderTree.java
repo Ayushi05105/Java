@@ -1,7 +1,4 @@
 package Trees;
-
-import javax.swing.tree.TreeNode;
-
 public class postInOrderTree {
 
     public static class Node{
