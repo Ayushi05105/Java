@@ -36,8 +36,10 @@ public class Infection {
         Map<Node , Integer> v =new HashMap<>();
         v.put(node,0);
         while(q.size()>0){
-            Node temp = q.peek();
+
+            Node temp = q.poll();
             int level = v.get(temp);
+
             if(temp.left != null && !v.containsKey(temp.left)){
                 q.add(temp.left);
                 v.put(temp.left, level +1);
@@ -46,9 +48,11 @@ public class Infection {
                 q.add(temp.right);
                 v.put(temp.right, level +1);
             }
-            if(p.containsKey(temp) && !v.containsKey(p.get(temp))){
-                q.add(temp.right);
-                v.put(temp.right, level +1);
+            if(p.containsKey(temp)){
+                Node parent = p.get(temp);
+                if(!v.containsKey(parent))
+                q.add(parent);
+                v.put(parent, level +1);
             }
         } 
         int max = -1;
@@ -71,8 +75,7 @@ public class Infection {
         Node f= new Node(7);
         b.left =e;
         b.right = f;
-        System.out.println(amountOfTime(a, 1));
-
+        System.out.println(amountOfTime(root, 5));
     }
     
 }
