@@ -1,8 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-import Sorting.stringSort;
-
 public class deleteNode {
      public static class Node{
         int val;
@@ -50,7 +48,13 @@ public class deleteNode {
     }
     public static void delete(Node root,int target){
         if(root.val > target){
-            if(root.left.val == target) root.left = null;
+            if(root.left.val == target){
+                if(root.left.left == null && root.left.right == null) root.left = null;
+                else if(root.left.left== null || root.left.right==null){
+                    if(root.left.left !=null) root.left = root.left.left;
+                    else root.left = root.left.right;
+                }
+            } 
             else delete(root.left, target);
         }
       if(root.val < target){
