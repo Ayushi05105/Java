@@ -22,7 +22,7 @@ public class traversal {
             Node temp = q.remove();
             Node left = new Node(10);
             Node right = new Node(100);
-            if(arr[i].equals(" ")) left = null;
+            if(arr[i].equals("")) left = null;
             else{
                 int l = Integer.parseInt(arr[i]);
                 left.val = l;
@@ -30,7 +30,7 @@ public class traversal {
             }
             if(arr[i+1].equals("")) right = null;
             else{
-                int r = Integer.parseInt(arr[i]);
+                int r = Integer.parseInt(arr[i+1]);
                 right.val = r;
                 q.add(right);
             }
@@ -42,21 +42,21 @@ public class traversal {
     }
     public static void preorder(Node root){
         if(root == null) return ;
-        System.out.println(root.val +" ");
+        System.out.print(root.val +" ");
         preorder(root.left);
         preorder(root.right);
     }
     public static void inorder(Node root){
         if(root == null) return ;
         inorder(root.left);
-        System.out.println(root.val +" ");
+        System.out.print(root.val +" ");
         inorder(root.right);
     }
     public static void postorder(Node root){
         if(root == null) return ;
         postorder(root.left);
         postorder(root.right);
-        System.out.println(root.val +" ");
+        System.out.print(root.val +" ");
     }
     public static void main(String[] args) {
         String[] arr = {"1","2","3","4","5","","6","7","","","8","","","9",""};
