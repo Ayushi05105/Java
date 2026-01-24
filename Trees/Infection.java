@@ -75,6 +75,7 @@ public class Infection {
         Node f= new Node(7);
         b.left =e;
         b.right = f;
+        
         System.out.println(amountOfTime(root, 5));
     }
     
