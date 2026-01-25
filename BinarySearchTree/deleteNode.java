@@ -46,28 +46,47 @@ public class deleteNode {
         preorder(root.left);
         preorder(root.right);
     }
+
     public static void delete(Node root,int target){
+        if(root == null) return;
         if(root.val > target){
+            if(root.left == null) return;
             if(root.left.val == target){
-                if(root.left.left == null && root.left.right == null) root.left = null;
-                else if(root.left.left== null || root.left.right==null){
-                    if(root.left.left !=null) root.left = root.left.left;
-                    else root.left = root.left.right;
+                Node l = root.left;
+                if(l.left == null && l.right == null) root.left = null;
+                else if(l.left== null || l.right==null){
+                    if(l.left !=null) root.left = l.left;
+                    else root.left = l.right;
                 }
             } 
             else delete(root.left, target);
         }
-      if(root.val < target){
-            if(root.right.val == target) root.right = null;
+        else{
+            if(root.right == null) return;
+            if(root.right.val == target){
+                Node r = root.right;
+                if(r.left == null && r.right== null) root.right =null;
+                else if(r.left == null || r.right == null){
+                    if(r.left != null) root.right = r.left;
+                    else root.right = r.right;
+                }
+            }
             else delete(root.right, target);
-        }    
+        }
+
+
+
+    //   if(root.val < target){
+    //         if(root.right.val == target) root.right = null;
+    //         else delete(root.right, target);
+    //     }    
     }
     public static void main(String[] args) {
         String[] arr = {"50","20","60","17","34","55","89","10","","28","","","","70","","","14"};
         Node root = constructBfs(arr);
         preorder(root);
         System.out.println();
-        delete(root,28);
+        delete(root,10);
         preorder(root);
     }
     
