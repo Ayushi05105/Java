@@ -1,6 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+import javax.swing.tree.TreeNode;
+
 public class deleteNode {
      public static class Node{
         int val;
@@ -58,6 +60,15 @@ public class deleteNode {
                     if(l.left !=null) root.left = l.left;
                     else root.left = l.right;
                 }
+                else{  //2 child
+                    Node curr =l;
+                    Node pred = curr.left;
+                    while(pred.right!=null) pred = pred.right;
+                    delete(root, pred.val);
+                    pred.left =curr.left ;
+                    pred.right = curr.right;
+                    root.left = pred;
+                }
             } 
             else delete(root.left, target);
         }
@@ -70,23 +81,32 @@ public class deleteNode {
                     if(r.left != null) root.right = r.left;
                     else root.right = r.right;
                 }
+                else{  //2 child
+                    Node curr =r;
+                    Node pred = curr.left;
+                    while(pred.right!=null) pred = pred.right;
+                    delete(root, pred.val);
+                    pred.left =curr.left ;
+                    pred.right = curr.right;
+                    root.right = pred;
+                }
             }
             else delete(root.right, target);
-        }
-
-
-
+        }   
+    }
     //   if(root.val < target){
     //         if(root.right.val == target) root.right = null;
     //         else delete(root.right, target);
-    //     }    
-    }
+    //     } 
     public static void main(String[] args) {
         String[] arr = {"50","20","60","17","34","55","89","10","","28","","","","70","","","14"};
         Node root = constructBfs(arr);
         preorder(root);
         System.out.println();
-        delete(root,10);
+        Node temp = new Node(Integer.MAX_VALUE);
+        temp.left = root;
+        delete(temp,20);
+        root = temp.left;
         preorder(root);
     }
     
