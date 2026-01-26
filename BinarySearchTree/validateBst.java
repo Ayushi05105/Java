@@ -1,7 +1,3 @@
-import java.util.List;
-
-import javax.swing.tree.TreeNode;
-
 public class validateBst {
 
     public static class Node{
