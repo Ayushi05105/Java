@@ -14,6 +14,9 @@ public class lowestCommonAncestor {
         else if(p.val<root.val && q.val<root.val) return LowestCommonAncestor(root.left,p,q);
         else return LowestCommonAncestor(root.right,p,q);
     }
+    public static void main(String[] args) {
+        
+    }
    
     
 }
