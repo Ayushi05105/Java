@@ -17,13 +17,10 @@ public class bstToGreaterTree {
         System.out.print(sum+" ");
         helper(root.left);
     }
-
-
     public static Node convertBST(Node root){
         sum = 0;
         helper(root);
         return root;
-
     }
 
     public static void main(String[] args) {
@@ -50,5 +47,4 @@ public class bstToGreaterTree {
         i.left = j;
         convertBST(root);
         }
-    
 }
