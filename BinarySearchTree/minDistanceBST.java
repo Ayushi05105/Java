@@ -17,7 +17,6 @@ public class minDistanceBST {
         if(prev != null){
         int diff = Math.abs(root.val - prev.val);
         minDiff = Math.min(minDiff,diff);
-        System.out.print(minDiff+" ");
         }
         prev = root;
         inorder(root.right);
