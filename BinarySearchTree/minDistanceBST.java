@@ -51,5 +51,4 @@ public class minDistanceBST {
         i.left = j;
         minDiffInBST(root);
     }
-    
 }
