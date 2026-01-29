@@ -12,7 +12,7 @@ public class morris_Inorder {
         }
     }
 
-    public List<Integer> inorderTraversal(Node root) {
+    public static List<Integer> inorderTraversal(Node root) {
         Node curr = root;
         List<Integer> arr = new ArrayList<>();
         while(curr!=null){
