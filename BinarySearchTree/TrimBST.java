@@ -1,5 +1,3 @@
-
-
 public class TrimBST {
 
     public static class Node{
@@ -22,10 +20,10 @@ public class TrimBST {
             else if(root.right.val < low)  root.right = root.right.right;
             else break;
         }
-        
         helper(root.left,low,high);
         helper(root.right,low,high);
     }
+
     public static Node trimBST(Node root, int low, int high) {
         Node parent = new Node(Integer.MAX_VALUE);
         parent.left = root;
