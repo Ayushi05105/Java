@@ -8,6 +8,7 @@ public class TrimBST {
             this.val = val;
         }
     }
+    
      public static void helper(Node root, int low,int high){
         if(root == null) return;
         while(root.left != null){
