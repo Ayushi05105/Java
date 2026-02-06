@@ -27,12 +27,12 @@ public class HashmapImplementation {
             }
         }
 
-        private int HashFunc(K key){
+        private  int HashFunc(K key){
             int hc = key.hashCode();
             return(Math.abs(hc)) % buckets.length;
         }
 
-        private int searchInBucket(LinkedList<Node> ll ,K key){
+        private  int searchInBucket(LinkedList<Node> ll ,K key){
             for(int i=0;i<ll.size();i++){
                 if(ll.get(i).key == key){
                     return i;
