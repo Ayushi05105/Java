@@ -18,7 +18,7 @@ public class MaxFreq {
             int freq = map.get(ch);
             if(freq >maxFreq) maxFreq = freq;
         }
-        char ans = s.charAt(0);
+        char ans = 'z';
          for(char ch:map.keySet()){
             int freq = map.get(ch);
             if(freq ==maxFreq && ch<ans){
