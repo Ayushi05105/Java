@@ -19,6 +19,7 @@ public class basic {
         //changing value of a key in hashmap
 
         //Traversing all enteries of HashMap - multiple method
+        
         for(String key : mp.keySet()){
             System.out.printf("Age of %s is %d\n",key,mp.get(key));
         }
