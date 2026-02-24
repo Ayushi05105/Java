@@ -13,7 +13,7 @@ public class pathsumII {
             this.val = val;
         }
     }
-        public void helper(List<List<Integer>> ans,List<Integer> arr,Node root,int sum){
+        public static void helper(List<List<Integer>> ans,List<Integer> arr,Node root,int sum){
         if(root == null) return;
         if(root.left == null && root.right == null){
             arr.add(root.val);
@@ -33,7 +33,7 @@ public class pathsumII {
         arr.remove(arr.size()-1);
 
     }
-    public List<List<Integer>> pathSum(Node root, int targetSum) {
+    public static List<List<Integer>> pathSum(Node root, int targetSum) {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> arr =new ArrayList<>();
         helper(ans,arr,root,targetSum); 
@@ -53,6 +53,8 @@ public class pathsumII {
         Node f= new Node(7);
         b.left =e;
         b.right = f;
+        List<List<Integer>> sum = pathSum(root, 7);
+        System.out.println(sum);
     }
     
 }

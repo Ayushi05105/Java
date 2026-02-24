@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.Arrays;
+
 public class q {
     public static class Node{
         Node next;
@@ -321,5 +323,131 @@ public class q {
         head = merge(head,mergeHead);
         return head;
     }
+    
+
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+        return ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u';
+    }
+
+    public static void main(String[] args) {
+
+        char[] arr = {'b','a','c','e','d','i','f'};
+
+        int left = 0;
+
+        for(int right = 0; right < arr.length; right++){
+            if(isVowel(arr[right])){
+                char temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+            }
+        }
+
+        System.out.println(Arrays.toString(arr));
+    }
+    //palindrome ll
+    public ListNode reverseLL(ListNode head){
+        ListNode curr = head;
+        ListNode prev = null;
+        ListNode after = null;
+        while(curr != null){
+            after = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = after;
+        }
+        return prev;
+    }
+    public boolean isPalindrome(Node head) {
+        Node slow=head;
+        Node fast = head;
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node temp = reverseLL(slow.next);
+        slow.next = temp;
+        Node p1 = head;
+        Node p2 = slow.next;
+        while(p2 !=null){
+        if(p1.val!=p2.val) return false;
+        p1=p1.next;
+        p2=p2.next;
+    }
+    return true;
 }
+
+//sort list
+public static Node findMiddle(Node head){
+        Node slow = head;
+        Node fast = head.next;  // becz we want 1 node prev then the middle like in tortoise algorithm
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+    public static Node mergeList(Node list1,Node list2){
+        Node t1 = list1;
+        Node t2 = list2;
+        Node h = new Node(100);
+        Node t = h;
+        while(t1 != null && t2 != null){
+            if(t1.val < t2.val){
+                t.next = t1;
+                t = t1;
+                t1 = t1.next;
+            }
+            else{
+                t.next = t2;
+                t = t2;
+                t2 = t2.next;
+            }
+        }
+        if(t1 == null){
+            t.next = t2;
+        }
+        else{
+            t.next = t1;
+        }
+        return h.next;
+    }
+    public static Node sortList(Node head) {
+        if(head == null || head.next == null) return head;
+        Node middle = findMiddle(head);
+        Node right = middle.next;
+        middle.next = null;
+        Node left = head;
+        left = sortList(left);
+        right = sortList(right);
+        return mergeList(left,right);
+    }
+
+    //add two number
+     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+      ListNode dummy = new ListNode();
+      ListNode temp = dummy;
+      int carry =0;
+      while(l1 !=null || l2!=null || carry ==1){
+        int sum =0;
+        if(l1!=null){
+            sum+=l1.val;
+            l1=l1.next;
+        }
+        if(l2!=null){
+            sum+=l2.val;
+            l2 = l2.next;
+        }
+        sum+=carry;
+        carry = sum/10;
+        ListNode node = new ListNode(sum%10);
+        temp.next = node;
+        temp = temp.next;
+      }  
+      return dummy.next;
+    }
+}
+
 

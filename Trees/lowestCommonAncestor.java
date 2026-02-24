@@ -10,12 +10,12 @@ public class lowestCommonAncestor {
         }
     }
 
-     public boolean contains(Node root,Node node){
+     public static boolean contains(Node root,Node node){
         if(root==null) return false;
         if(root==node) return true;
         return contains(root.left,node) || contains(root.right,node);
     }
-    public Node LowestCommonAncestor(Node root, Node p,Node q) {
+    public static Node LowestCommonAncestor(Node root, Node p,Node q) {
         if(p==root || q==root) return root;
         if(p==q) return p;
         boolean leftp=contains(root.left,p);
@@ -37,6 +37,7 @@ public class lowestCommonAncestor {
         a.right = d;
         Node e = new Node(11); 
         b.right = e;
-    
+        Node lca = LowestCommonAncestor(root, d, e);
+        System.out.println(lca.val);
 }
 }
