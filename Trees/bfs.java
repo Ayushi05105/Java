@@ -42,5 +42,6 @@ public class bfs {
         b.left =e;
         b.right = f;
         BFS(root);
+        
     }
 }
