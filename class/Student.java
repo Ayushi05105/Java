@@ -4,6 +4,10 @@ public class Student {
     int age;
     static int m;
 
+    public Student(int i, String string) {
+        //TODO Auto-generated constructor stub
+    }
+
     void printData() {
         System.out.println("Student name = " + name);
         System.out.println("Student city = " + city);
